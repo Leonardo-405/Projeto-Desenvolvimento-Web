@@ -1,0 +1,7 @@
+<ol>
+    <li *ngFor="let item of tarefas" [ngStyle]="{'color': item.ativo?'black':'gray', 'text-decoration':item.ativo?'none':'line-through'}">
+        {{item.nome}} ({{item.numero}})
+        <button class="btn py-0"[ngClass]="{'btn-primary': item.ativo, 'btn-secondary': 
+        !item.ativo}"(click)="ativar(item)">{{item.ativo?'Confirmar':'Ativar'}}</button>
+    </li>
+</ol>
